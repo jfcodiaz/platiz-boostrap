@@ -10,95 +10,38 @@
 
     <title>Hello, world!</title>
     <style>
-    .col {
-        border: 1px solid blue;
+    .container .row div, .col {
+        border: 1px solid white;
         height: 100px;
-    }
-    .container {
         background-color: red;
     }
+    .row {
+        background-color: #ffffff;
+    }
+    .container {
+     
+    }
+    
     </style>
   </head>
   <body>
     <div class="container">
-
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6 offset-md-6">
                 1
             </div>
-            <div class="col">
+        </div>
+        <div class="row">
+            <div class="col-8 offset-sm-0  offset-md-2">
                 2
             </div>
-            <div class="col">
+        </div>
+        <div class="row">
+            <div class="col-3 offset-9 offset-md-0">
                 3
-            </div>
-        </div>
-
-
-        <div class="row">
-            <div class="col">
-              1
-            </div>
-            <div class="col">
-              2
-            </div>
-            <div class="col">
-              3
-            </div>
-            <div class="col">
-               4 
-            </div>
-            <div class="col">
-                5
-            </div>
-            <div class="col">
-                6
-            </div>
-            <div class="col">
-                7
-            </div>
-            <div class="col">
-                8
-            </div>
-            <div class="col">
-                9
-            </div>
-            <div class="col">
-                10
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                1
-            </div>
-            <div class="col">
-                2
-            </div>
-        </div>
-            
-        <div class="row">
-            <div class="col">
-                1
-            </div>
-            <div class="col">
-                2
-            </div>
-            <div class="col">
-                3
-            </div>
-            <div class="col">
-                4 
-            </div>
-            <div class="col">
-                5
             </div>
         </div>
         
-        <div class="row">
-            <div class="col">
-              1
-            </div>
-        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
