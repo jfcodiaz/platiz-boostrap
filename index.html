@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="index.css">
     <title>PlatziConf Hawaii</title>
   </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbar" data-offset="57">
     <!-- Header -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/platzi-logo.png" alt="plazi-logo"/> Conf Hawaii
@@ -21,22 +21,22 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">La Confrencia <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#main">La Confrencia <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Los oradores</a>
+                        <a class="nav-link" href="#speakers">Los oradores</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="#">El lugar y la fecha</a>
+                            <a class="nav-link" href="#place-time">El lugar y la fecha</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Conviértete en orador</a>
+                        <a class="nav-link" href="#be-speaker">Conviértete en orador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-plazi" href="#">Comprar tickets</a>
+                        <a class="nav-link text-plazi" href="#" data-target="#modalCompra" data-toggle="modal">Comprar tickets</a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +69,7 @@
                                     y a los oradores de primer nivel que tenemos para ti. ¡Te esperamos!
                                 </p>
                                 <a href="#"class="btn btn-outline-light">Queiro ser orador</a>
-                                <button class="btn  btn-success btn-platzi" type="button">Comprar tickets</button>
+                                <button class="btn  btn-success btn-platzi" type="button" data-target="#modalCompra" data-toggle="modal">Comprar tickets</button>
                             </div>
                         </div>
                     </div>
@@ -237,7 +237,40 @@
             </div>
         </div>
     </footer>
-  <body>
+
+    <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Comprar Ticket</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="username" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="alert alert-warning">
+                    Recibiras un correo de confirmación si sales sorteado.
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-platzi">Comprar</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
